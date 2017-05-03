@@ -19,15 +19,19 @@ import NewApp from './app';
 
 // const appState = new AppState();
 
-import {observable,autorun} from 'mobx';
+import {observable,autorun,computed} from 'mobx';
 
 var appState = observable({
    timer : 0 ,
-   get zijipao(){
-      setInterval(()=>{
-            this.timer += 1;
-        },1000)
-   } 
+  //  get zijipao(){
+  //     setInterval(()=>{
+  //           this.timer += 1;
+  //       },1000)
+  //  } 
+
+  zijipao : computed(function(){
+    setInterval(()=>{this.timer += 1;},1000)
+  })
 })
 
 import {action} from 'mobx';
