@@ -60,3 +60,7 @@ export default class Proj extends Component {
 
 
 AppRegistry.registerComponent('Proj', () => Proj);
+
+
+
+//经验法则：如果你有一个函数应该自动运行，但不会产生一个新的值，请使用autorun。 其余情况都应该使用 computed。
