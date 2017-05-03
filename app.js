@@ -13,7 +13,7 @@ import {
 
 import {observer} from 'mobx-react';
 
-class App extends Component {
+const NewApp = observer(class App extends Component {
     render() {
         return (
         <View>
@@ -25,9 +25,9 @@ class App extends Component {
         </View>
         );
     }
-}
+})
 
-const NewApp = observer(App);
+// const NewApp = observer(App);
 
 export default NewApp;
 
